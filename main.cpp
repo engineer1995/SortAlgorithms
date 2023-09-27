@@ -3,7 +3,7 @@
 void BubbleSort(int* arr, size_t N);
 void SelectionSort(int* arr, size_t N);
 void InsertSort(int* arr, size_t N);
-
+void QuickSort(int* arr, int left, int right);
 
 
 int main(){
@@ -18,6 +18,31 @@ return 0;
 }
 
 
+void QuickSort(int* arr, int left, int right)
+{
+    if(left > right) return;
+    int pivot = arr[(left+right)/2]; // средний элемент
+    int i = left;
+    int j = right;
+    while(i <= j)
+        {
+            while(a[i] < pivot) i++;
+            while(a[j] > pivot) j--;
+            if(i <= j )
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
+            }
+        }
+    QuickSort(arr,left, j);
+    QuickSort(arr, i, right);
+}
+
+
+// --------------------------------------------------------
 // O(n*n) - difficult; 
 
 void SelectionSort(int* arr, size_t N){
@@ -69,6 +94,6 @@ void BubbleSort(int* arr, size_t N){
             }
         }
     }
-    
+// -------------------------------------------------------------------------
 }
 
