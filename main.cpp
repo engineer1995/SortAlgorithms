@@ -18,6 +18,7 @@ return 0;
 }
 
 
+// O(n*n) - difficult; 
 
 void SelectionSort(int* arr, size_t N){
     for (int i = 0; i < N-1; ++i){
@@ -35,6 +36,23 @@ void SelectionSort(int* arr, size_t N){
         }
     }
 }
+
+
+void InsertSort(int* arr, size_t N)
+{
+    for(int i = 1; i < N; ++i)
+        {
+            int buffer = arr[i];
+            int j = i - 1;
+            while(j >= 0 && arr[j] > buffer)
+                {
+                    arr[j+1] = arr[j];
+                    j--;
+                }
+                arr[j+1] = buffer;
+        }
+}
+
 
 
 void BubbleSort(int* arr, size_t N){
