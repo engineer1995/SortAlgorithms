@@ -10,13 +10,14 @@ int main(){
 
     int arr[] = {123, 122, 120, 120, 0};
     int N = 5;
-    SelectionSort(arr, N);
+    QuickSort(arr, 0, N-1);
     for(int i = 0; i < N; ++i){
         std::cout << arr[i] << " ";
     }
 return 0;
 }
 
+// O(n*log*n)
 
 void QuickSort(int* arr, int left, int right)
 {
@@ -26,8 +27,8 @@ void QuickSort(int* arr, int left, int right)
     int j = right;
     while(i <= j)
         {
-            while(a[i] < pivot) i++;
-            while(a[j] > pivot) j--;
+            while(arr[i] < pivot) i++;
+            while(arr[j] > pivot) j--;
             if(i <= j )
             {
                 int temp = arr[i];
