@@ -17,7 +17,7 @@ int main(){
 return 0;
 }
 
-// O(n*log*n)
+// O(n*log*n) time difficult
 
 void QuickSort(int* arr, int left, int right)
 {
@@ -44,7 +44,7 @@ void QuickSort(int* arr, int left, int right)
 
 
 // --------------------------------------------------------
-// O(n*n) - difficult; 
+// O(n*n) - time difficult; 
 
 void SelectionSort(int* arr, size_t N){
     for (int i = 0; i < N-1; ++i){
